@@ -1,0 +1,14 @@
+{
+  "n_rows": 130,
+  "n_groups": 5,
+  "year_min": 2000,
+  "year_max": 2025,
+  "series_used": {
+    "Management, professional, and related occupations": "LEU0254524600A",
+    "Service occupations": "LEU0254543400A",
+    "Sales and office occupations": "LEU0254550200A",
+    "Natural resources, construction, and maintenance occupations": "LEU0254557400A",
+    "Production, transportation, and material moving occupations": "LEU0254566200A"
+  },
+  "source_aioe": "https://raw.githubusercontent.com/AIOE-Data/AIOE/main/AIOE_DataAppendix.xlsx"
+}
