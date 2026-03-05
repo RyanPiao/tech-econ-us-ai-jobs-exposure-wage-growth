@@ -68,7 +68,7 @@ def main() -> None:
     }
     (OUT / "day4_twfe_baseline_summary.json").write_text(json.dumps(summary, indent=2))
 
-    note = f"""# Day 4 — Baseline TWFE Intensity DiD
+    note = f"""# Step 4 — Baseline TWFE Intensity DiD
 
 Specification:
 - Outcome: `wage_growth_yoy`

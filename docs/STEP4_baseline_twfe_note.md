@@ -1,4 +1,4 @@
-# Day 4 — Baseline TWFE Intensity DiD
+# Step 4 — Baseline TWFE Intensity DiD
 
 Specification:
 - Outcome: `wage_growth_yoy`

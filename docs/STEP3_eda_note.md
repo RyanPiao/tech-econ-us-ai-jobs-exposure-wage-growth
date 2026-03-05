@@ -1,4 +1,4 @@
-# Day 3 — EDA Note
+# Step 3 — EDA Note
 
 ## Scope
 Exploratory diagnostics linking major-group AI exposure (AIOE) and nominal weekly wage growth outcomes.

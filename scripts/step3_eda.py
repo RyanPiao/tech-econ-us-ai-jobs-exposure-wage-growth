@@ -71,7 +71,7 @@ def main() -> None:
     with open(OUTPUTS / "day3_eda_metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
 
-    note = f"""# Day 3 — EDA Note
+    note = f"""# Step 3 — EDA Note
 
 ## Scope
 Exploratory diagnostics linking major-group AI exposure (AIOE) and nominal weekly wage growth outcomes.

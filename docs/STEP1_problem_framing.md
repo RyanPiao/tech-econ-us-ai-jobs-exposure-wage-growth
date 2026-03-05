@@ -1,4 +1,4 @@
-# Day 1 — Problem Framing
+# Step 1 — Problem Framing
 
 ## Topic
 **US AI Jobs Exposure × Wage Growth**
@@ -17,9 +17,9 @@ Do occupation groups with higher measured exposure to AI capabilities also show 
 2. **Wage outcomes**
    - Source: FRED series for median usual weekly nominal earnings by major occupation group (annual).
 
-## Planned outputs for Day 1–3
-- Day 2: reproducible ingestion + harmonization pipeline and analysis-ready panel.
-- Day 3: exploratory analysis (cross-sectional and pooled correlations), plots, and interpretation note.
+## Planned outputs for Step 1–3
+- Step 2: reproducible ingestion + harmonization pipeline and analysis-ready panel.
+- Step 3: exploratory analysis (cross-sectional and pooled correlations), plots, and interpretation note.
 
 ## Risks / limitations recognized up front
 - Small cross-section (five major groups) for top-line comparisons.

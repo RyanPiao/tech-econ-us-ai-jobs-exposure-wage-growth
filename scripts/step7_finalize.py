@@ -26,24 +26,24 @@ def main():
     pre = event[(event.get("event_time", pd.Series(dtype=float)) <= -2)] if not event.empty else pd.DataFrame()
     post = event[(event.get("event_time", pd.Series(dtype=float)) >= 0)] if not event.empty else pd.DataFrame()
 
-    note = f"""# Day 7 — Final Public Research Progress Summary
+    note = f"""# Step 7 — Final Public Research Progress Summary
 
 ## Completion status
-- Day 1 ✅ Problem framing
-- Day 2 ✅ Data extraction/spec lock + panel build
-- Day 3 ✅ EDA and descriptive correlations
-- Day 4 ✅ Baseline TWFE intensity DiD
-- Day 5 ✅ Robustness checks (threshold/placebo + winsorized outcome)
-- Day 6 ✅ Event-study dynamics
-- Day 7 ✅ Synthesis and publication-ready summary
+- Step 1 ✅ Problem framing
+- Step 2 ✅ Data extraction/spec lock + panel build
+- Step 3 ✅ EDA and descriptive correlations
+- Step 4 ✅ Baseline TWFE intensity DiD
+- Step 5 ✅ Robustness checks (threshold/placebo + winsorized outcome)
+- Step 6 ✅ Event-study dynamics
+- Step 7 ✅ Synthesis and publication-ready summary
 
 ## Key metrics (current run)
-- Day 3 latest-year correlation (exposure vs cumulative growth): **{d3.get('corr_latest_exposure_vs_cum_growth', float('nan')):.4f}**
-- Day 4 baseline TWFE coefficient (`ai_exposure_x_post2022`): **{d4.get('coef', float('nan')):.6f}** (SE {d4.get('se_hc1', float('nan')):.6f})
-- Day 5 robustness specs estimated: **{d5.get('n_specs', 0)}**
-- Day 6 event-study window: **{d6.get('event_window', [])}**, reference {d6.get('reference', 'NA')}
-- Day 6 mean pre-event coefficient (k<=-2): **{pre['coef'].mean() if not pre.empty else float('nan'):.6f}**
-- Day 6 mean post-event coefficient (k>=0): **{post['coef'].mean() if not post.empty else float('nan'):.6f}**
+- Step 3 latest-year correlation (exposure vs cumulative growth): **{d3.get('corr_latest_exposure_vs_cum_growth', float('nan')):.4f}**
+- Step 4 baseline TWFE coefficient (`ai_exposure_x_post2022`): **{d4.get('coef', float('nan')):.6f}** (SE {d4.get('se_hc1', float('nan')):.6f})
+- Step 5 robustness specs estimated: **{d5.get('n_specs', 0)}**
+- Step 6 event-study window: **{d6.get('event_window', [])}**, reference {d6.get('reference', 'NA')}
+- Step 6 mean pre-event coefficient (k<=-2): **{pre['coef'].mean() if not pre.empty else float('nan'):.6f}**
+- Step 6 mean post-event coefficient (k>=0): **{post['coef'].mean() if not post.empty else float('nan'):.6f}**
 
 ## Public artifacts
 - `docs/DAY1_problem_framing.md`

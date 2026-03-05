@@ -18,7 +18,7 @@ def main() -> None:
     for s in ORDER:
         print(f"[RUN] {s}")
         subprocess.run([sys.executable, str(SCRIPTS / s)], check=True, cwd=ROOT)
-    print("[OK] Day4-Day7 completed.")
+    print("[OK] Step4-Step7 completed.")
 
 
 if __name__ == "__main__":

@@ -65,7 +65,7 @@ def main():
     plt.errorbar(p["event_time"], p["coef"], yerr=1.96 * p["se"], fmt="o", capsize=2)
     plt.axhline(0, color="black", linestyle="--", linewidth=1)
     plt.axvline(0, color="red", linestyle="--", linewidth=1)
-    plt.title("Day 6 Event Study: Exposure-Scaled Effects")
+    plt.title("Step 6 Event Study: Exposure-Scaled Effects")
     plt.xlabel("Event time (year relative to 2022)")
     plt.ylabel("Coefficient")
     plt.tight_layout()
@@ -75,7 +75,7 @@ def main():
     summary = {"n_obs": int(n), "event_window": [min(window), max(window)], "reference": ref}
     (OUT / "day6_event_study_summary.json").write_text(json.dumps(summary, indent=2))
     (DOCS / "DAY6_event_study_note.md").write_text(
-        "# Day 6 — Event-Study Note\n\n"
+        "# Step 6 — Event-Study Note\n\n"
         "Estimated exposure-scaled event-time coefficients relative to reference year -1 (2021).\n"
         "See `outputs/day6_event_study_coefficients.csv` and `outputs/day6_event_study_plot.png`.\n"
     )

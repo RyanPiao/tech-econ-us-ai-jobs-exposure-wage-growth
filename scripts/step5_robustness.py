@@ -67,7 +67,7 @@ def main():
     (OUT / "day5_robustness_summary.json").write_text(json.dumps(summary, indent=2))
 
     (DOCS / "DAY5_robustness_note.md").write_text(
-        "# Day 5 — Robustness Note\n\n"
+        "# Step 5 — Robustness Note\n\n"
         "Ran threshold-placebo and winsorized-outcome robustness checks for the intensity TWFE design.\n"
         "See `outputs/day5_robustness_results.csv`.\n"
     )

@@ -1,6 +1,6 @@
-# Day 2 — Preanalysis Lock (Exploratory Phase)
+# Step 2 — Preanalysis Lock (Exploratory Phase)
 
-This lock records the plan before Day 3 interpretation.
+This lock records the plan before Step 3 interpretation.
 
 ## Outcome
 - Primary: annual YoY growth in median weekly nominal earnings (`wage_growth_yoy`)
@@ -9,7 +9,7 @@ This lock records the plan before Day 3 interpretation.
 ## Exposure
 - `ai_exposure_mean` (major-group average AIOE)
 
-## Planned Day 3 diagnostics
+## Planned Step 3 diagnostics
 1. Cross-sectional association in latest year:
    - Corr(`ai_exposure_mean`, `cum_growth_since_start`)
 2. Cross-sectional association of long-run average growth:

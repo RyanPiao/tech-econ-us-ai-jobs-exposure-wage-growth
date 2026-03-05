@@ -1,4 +1,4 @@
-# Day 2 — Data Extraction Specification
+# Step 2 — Data Extraction Specification
 
 ## Public sources
 1. **AIOE data appendix**
