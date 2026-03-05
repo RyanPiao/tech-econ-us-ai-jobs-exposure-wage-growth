@@ -7,10 +7,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
 
 ORDER = [
-    "day4_baseline_twfe.py",
-    "day5_robustness.py",
-    "day6_event_study.py",
-    "day7_finalize.py",
+    "step4_baseline_twfe.py",
+    "step5_robustness.py",
+    "step6_event_study.py",
+    "step7_finalize.py",
 ]
 
 
