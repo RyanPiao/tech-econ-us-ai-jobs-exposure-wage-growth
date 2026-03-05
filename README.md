@@ -4,13 +4,13 @@ Canonical project repo for approved topic:
 `tech-econ-us-ai-jobs-exposure-wage-growth`
 
 ## Status
-- ✅ Day 1: problem framing
-- ✅ Day 2: ingestion/spec lock/panel construction
-- ✅ Day 3: exploratory analysis artifacts
-- ✅ Day 4: baseline TWFE intensity DiD
-- ✅ Day 5: robustness checks
-- ✅ Day 6: event-study dynamics
-- ✅ Day 7: final synthesis package
+- ✅ Step 1: problem framing
+- ✅ Step 2: ingestion/spec lock/panel construction
+- ✅ Step 3: exploratory analysis artifacts
+- ✅ Step 4: baseline TWFE intensity DiD
+- ✅ Step 5: robustness checks
+- ✅ Step 6: event-study dynamics
+- ✅ Step 7: final synthesis package
 
 ## Folder structure
 ```text
@@ -18,13 +18,13 @@ Canonical project repo for approved topic:
 ├── README.md
 ├── requirements.txt
 ├── docs/
-│   ├── DAY1_problem_framing.md
-│   ├── DAY2_data_extraction_spec.md
-│   ├── DAY2_preanalysis_lock.md
-│   └── DAY3_eda_note.md
+│   ├── STEP1_problem_framing.md
+│   ├── STEP2_data_extraction_spec.md
+│   ├── STEP2_preanalysis_lock.md
+│   └── STEP3_eda_note.md
 ├── scripts/
-│   ├── day2_ingest_build_panel.py
-│   ├── day3_eda.py
+│   ├── step2_ingest_build_panel.py
+│   ├── step3_eda.py
 │   └── run_day2_day3.py
 ├── data_raw/
 ├── data_analysis/
