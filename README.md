@@ -7,6 +7,10 @@ Canonical project repo for approved topic:
 - ✅ Day 1: problem framing
 - ✅ Day 2: ingestion/spec lock/panel construction
 - ✅ Day 3: exploratory analysis artifacts
+- ✅ Day 4: baseline TWFE intensity DiD
+- ✅ Day 5: robustness checks
+- ✅ Day 6: event-study dynamics
+- ✅ Day 7: final synthesis package
 
 ## Folder structure
 ```text

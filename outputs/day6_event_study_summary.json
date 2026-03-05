@@ -1,0 +1,8 @@
+{
+  "n_obs": 125,
+  "event_window": [
+    -6,
+    3
+  ],
+  "reference": -1
+}
