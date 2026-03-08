@@ -10,10 +10,10 @@ Exploratory diagnostics linking major-group AI exposure (AIOE) and nominal weekl
 - Corr(exposure, pooled YoY growth): **0.0495**
 
 ## Artifacts
-- `outputs/day3_group_latest_snapshot.csv`
-- `outputs/day3_yearly_corr.csv`
-- `outputs/day3_eda_metrics.json`
-- `outputs/day3_exposure_vs_cum_growth_latest.png`
+- `outputs/step3_group_latest_snapshot.csv`
+- `outputs/step3_yearly_corr.csv`
+- `outputs/step3_eda_metrics.json`
+- `outputs/step3_exposure_vs_cum_growth_latest.png`
 
 ## Interpretation guardrails
 - These are descriptive correlations over a very small cross-section (5 major groups).

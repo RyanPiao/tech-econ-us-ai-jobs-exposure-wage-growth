@@ -57,19 +57,19 @@ def main():
     rows.append(rw)
 
     out = pd.DataFrame(rows)
-    out.to_csv(OUT / "day5_robustness_results.csv", index=False)
+    out.to_csv(OUT / "step5_robustness_results.csv", index=False)
 
     summary = {
         "n_specs": int(len(out)),
         "main_spec_coef": float(out.loc[out["spec"]=="post_2022", "coef"].iloc[0]),
         "main_spec_se": float(out.loc[out["spec"]=="post_2022", "se"].iloc[0]),
     }
-    (OUT / "day5_robustness_summary.json").write_text(json.dumps(summary, indent=2))
+    (OUT / "step5_robustness_summary.json").write_text(json.dumps(summary, indent=2))
 
-    (DOCS / "DAY5_robustness_note.md").write_text(
+    (DOCS / "STEP5_robustness_note.md").write_text(
         "# Step 5 — Robustness Note\n\n"
         "Ran threshold-placebo and winsorized-outcome robustness checks for the intensity TWFE design.\n"
-        "See `outputs/day5_robustness_results.csv`.\n"
+        "See `outputs/step5_robustness_results.csv`.\n"
     )
     print(json.dumps(summary, indent=2))
 

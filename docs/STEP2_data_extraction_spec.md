@@ -29,6 +29,6 @@
 - `cum_growth_since_start`
 
 ## Reproducibility
-- All ingestion and transforms are in `scripts/day2_ingest_build_panel.py`
+- All ingestion and transforms are in `scripts/step2_ingest_build_panel.py`
 - Raw pulls are stored in `data_raw/`
 - Analysis-ready panel is written to `data_analysis/panel_annual_majorgroup.csv`

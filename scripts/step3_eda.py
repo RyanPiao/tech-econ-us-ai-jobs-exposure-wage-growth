@@ -26,7 +26,7 @@ def main() -> None:
     )
 
     latest = latest.merge(avg_growth, on="major_group", how="left")
-    latest.to_csv(OUTPUTS / "day3_group_latest_snapshot.csv", index=False)
+    latest.to_csv(OUTPUTS / "step3_group_latest_snapshot.csv", index=False)
 
     corr_latest_cum = float(latest["ai_exposure_mean"].corr(latest["cum_growth_since_start"]))
     corr_latest_avg = float(latest["ai_exposure_mean"].corr(latest["avg_wage_growth_yoy"]))
@@ -38,7 +38,7 @@ def main() -> None:
         .apply(lambda g: g["ai_exposure_mean"].corr(g["wage_growth_yoy"]))
         .reset_index(name="corr_exposure_vs_wage_growth_yoy")
     )
-    yearly_corr.to_csv(OUTPUTS / "day3_yearly_corr.csv", index=False)
+    yearly_corr.to_csv(OUTPUTS / "step3_yearly_corr.csv", index=False)
 
     # Scatter plot (latest year)
     fig, ax = plt.subplots(figsize=(9, 6))
@@ -57,7 +57,7 @@ def main() -> None:
     ax.set_xlabel("Mean AI Exposure (AIOE), major group")
     ax.set_ylabel("Cumulative nominal wage growth since start")
     fig.tight_layout()
-    fig.savefig(OUTPUTS / "day3_exposure_vs_cum_growth_latest.png", dpi=150)
+    fig.savefig(OUTPUTS / "step3_exposure_vs_cum_growth_latest.png", dpi=150)
     plt.close(fig)
 
     metrics = {
@@ -68,7 +68,7 @@ def main() -> None:
         "n_groups_latest": int(latest.shape[0]),
         "n_obs_pooled": int(pooled.shape[0]),
     }
-    with open(OUTPUTS / "day3_eda_metrics.json", "w") as f:
+    with open(OUTPUTS / "step3_eda_metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
 
     note = f"""# Step 3 — EDA Note
@@ -83,17 +83,17 @@ Exploratory diagnostics linking major-group AI exposure (AIOE) and nominal weekl
 - Corr(exposure, pooled YoY growth): **{corr_pooled:.4f}**
 
 ## Artifacts
-- `outputs/day3_group_latest_snapshot.csv`
-- `outputs/day3_yearly_corr.csv`
-- `outputs/day3_eda_metrics.json`
-- `outputs/day3_exposure_vs_cum_growth_latest.png`
+- `outputs/step3_group_latest_snapshot.csv`
+- `outputs/step3_yearly_corr.csv`
+- `outputs/step3_eda_metrics.json`
+- `outputs/step3_exposure_vs_cum_growth_latest.png`
 
 ## Interpretation guardrails
 - These are descriptive correlations over a very small cross-section (5 major groups).
 - Exposure is capability-based and static; this does not identify realized AI adoption effects.
 - Results should be treated as directional signal generation for later, richer designs.
 """
-    (DOCS / "DAY3_eda_note.md").write_text(note)
+    (DOCS / "STEP3_eda_note.md").write_text(note)
 
     print(json.dumps(metrics, indent=2))
 

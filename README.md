@@ -21,11 +21,20 @@ Canonical project repo for approved topic:
 │   ├── STEP1_problem_framing.md
 │   ├── STEP2_data_extraction_spec.md
 │   ├── STEP2_preanalysis_lock.md
-│   └── STEP3_eda_note.md
+│   ├── STEP3_eda_note.md
+│   ├── STEP4_baseline_twfe_note.md
+│   ├── STEP5_robustness_note.md
+│   ├── STEP6_event_study_note.md
+│   └── STEP7_final_summary.md
 ├── scripts/
 │   ├── step2_ingest_build_panel.py
 │   ├── step3_eda.py
-│   └── run_day2_day3.py
+│   ├── step4_baseline_twfe.py
+│   ├── step5_robustness.py
+│   ├── step6_event_study.py
+│   ├── step7_finalize.py
+│   ├── run_step2_step3.py
+│   └── run_step4_step7.py
 ├── data_raw/
 ├── data_analysis/
 └── outputs/
@@ -46,7 +55,8 @@ Canonical project repo for approved topic:
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/run_day2_day3.py
+python scripts/run_step2_step3.py
+python scripts/run_step4_step7.py
 ```
 
 ## Notes

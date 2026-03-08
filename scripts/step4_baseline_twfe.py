@@ -52,7 +52,7 @@ def main() -> None:
     names = ["const", "ai_exposure_x_post2022", *[f"g_{g}" for g in groups[1:]], *[f"year_{y}" for y in years[1:]]]
 
     res = ols_hc1(X, df["wage_growth_yoy"].to_numpy(float), names)
-    res.to_csv(OUT / "day4_twfe_baseline_results.csv", index=False)
+    res.to_csv(OUT / "step4_twfe_baseline_results.csv", index=False)
 
     key = res.loc[res["term"] == "ai_exposure_x_post2022"].iloc[0].to_dict()
     summary = {
@@ -66,7 +66,7 @@ def main() -> None:
         "ci95_high": float(key["ci95_high"]),
         "n_obs": int(key["n_obs"]),
     }
-    (OUT / "day4_twfe_baseline_summary.json").write_text(json.dumps(summary, indent=2))
+    (OUT / "step4_twfe_baseline_summary.json").write_text(json.dumps(summary, indent=2))
 
     note = f"""# Step 4 — Baseline TWFE Intensity DiD
 
@@ -83,7 +83,7 @@ Key coefficient (`ai_exposure_x_post2022`):
 - 95% CI: **[{summary['ci95_low']:.6f}, {summary['ci95_high']:.6f}]**
 - N: **{summary['n_obs']}**
 """
-    (DOCS / "DAY4_baseline_twfe_note.md").write_text(note)
+    (DOCS / "STEP4_baseline_twfe_note.md").write_text(note)
     print(json.dumps(summary, indent=2))
 
 

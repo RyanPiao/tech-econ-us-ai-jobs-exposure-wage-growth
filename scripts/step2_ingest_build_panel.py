@@ -106,7 +106,7 @@ def main() -> None:
         "series_used": SERIES,
         "source_aioe": AIOE_URL,
     }
-    with open(OUTPUTS / "day2_panel_build_summary.json", "w") as f:
+    with open(OUTPUTS / "step2_panel_build_summary.json", "w") as f:
         json.dump(summary, f, indent=2)
 
     print(json.dumps(summary, indent=2))

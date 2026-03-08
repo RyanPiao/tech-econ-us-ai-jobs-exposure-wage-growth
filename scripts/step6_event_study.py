@@ -58,7 +58,7 @@ def main():
 
     ref_row = pd.DataFrame([{"term": "reference", "coef": 0.0, "se": np.nan, "event_time": ref, "ci95_low": np.nan, "ci95_high": np.nan}])
     ev = pd.concat([ev, ref_row], ignore_index=True).sort_values("event_time")
-    ev.to_csv(OUT / "day6_event_study_coefficients.csv", index=False)
+    ev.to_csv(OUT / "step6_event_study_coefficients.csv", index=False)
 
     p = ev[ev["term"] != "reference"]
     plt.figure(figsize=(8, 5))
@@ -69,15 +69,15 @@ def main():
     plt.xlabel("Event time (year relative to 2022)")
     plt.ylabel("Coefficient")
     plt.tight_layout()
-    plt.savefig(OUT / "day6_event_study_plot.png", dpi=150)
+    plt.savefig(OUT / "step6_event_study_plot.png", dpi=150)
     plt.close()
 
     summary = {"n_obs": int(n), "event_window": [min(window), max(window)], "reference": ref}
-    (OUT / "day6_event_study_summary.json").write_text(json.dumps(summary, indent=2))
-    (DOCS / "DAY6_event_study_note.md").write_text(
+    (OUT / "step6_event_study_summary.json").write_text(json.dumps(summary, indent=2))
+    (DOCS / "STEP6_event_study_note.md").write_text(
         "# Step 6 — Event-Study Note\n\n"
         "Estimated exposure-scaled event-time coefficients relative to reference year -1 (2021).\n"
-        "See `outputs/day6_event_study_coefficients.csv` and `outputs/day6_event_study_plot.png`.\n"
+        "See `outputs/step6_event_study_coefficients.csv` and `outputs/step6_event_study_plot.png`.\n"
     )
     print(json.dumps(summary, indent=2))
 

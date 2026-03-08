@@ -30,20 +30,20 @@ This project examines whether occupational AI exposure is systematically associa
 - Step 6 mean post-event coefficient (k>=0): **-0.001379**
 
 ## Public artifacts
-- `docs/DAY1_problem_framing.md`
-- `docs/DAY2_data_extraction_spec.md`
-- `docs/DAY2_preanalysis_lock.md`
-- `docs/DAY3_eda_note.md`
-- `docs/DAY4_baseline_twfe_note.md`
-- `docs/DAY5_robustness_note.md`
-- `docs/DAY6_event_study_note.md`
-- `docs/DAY7_final_summary.md`
+- `docs/STEP1_problem_framing.md`
+- `docs/STEP2_data_extraction_spec.md`
+- `docs/STEP2_preanalysis_lock.md`
+- `docs/STEP3_eda_note.md`
+- `docs/STEP4_baseline_twfe_note.md`
+- `docs/STEP5_robustness_note.md`
+- `docs/STEP6_event_study_note.md`
+- `docs/STEP7_final_summary.md`
 
-- `outputs/day3_*`
-- `outputs/day4_twfe_baseline_results.csv`
-- `outputs/day5_robustness_results.csv`
-- `outputs/day6_event_study_coefficients.csv`
-- `outputs/day6_event_study_plot.png`
+- `outputs/step3_*`
+- `outputs/step4_twfe_baseline_results.csv`
+- `outputs/step5_robustness_results.csv`
+- `outputs/step6_event_study_coefficients.csv`
+- `outputs/step6_event_study_plot.png`
 
 ## Interpretation discipline
 This remains a reduced-form, exposure-intensity design. Findings are not interpreted as structural causal AI adoption effects without stronger treatment observability and richer identification assumptions.
